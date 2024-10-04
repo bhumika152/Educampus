@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+    <script type="module">
+        import { getAuth, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+
+        window.onload = function() {
+            const auth = getAuth();
+            const emailLink = window.location.href;
+
+            if (isSignInWithEmailLink(auth, emailLink)) {
+                let email = window.localStorage.getItem('emailForSignIn');
+                
+                if (!email) {
+                    email = window.prompt('Please provide your email for confirmation');
+                }
+
+                signInWithEmailLink(auth, email, emailLink)
+                    .then((result) => {
+                        window.localStorage.removeItem('emailForSignIn');
+                        alert('Successfully signed in.');
+                        window.location.href = 'index.html';
+                    })
+                    .catch((error) => {
+                        console.error('Error during sign-in:', error.message);
+                    });
+            } else {
+                alert('Invalid sign-in link.');
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Verifying Email...</h2>
+</body>
+</html>

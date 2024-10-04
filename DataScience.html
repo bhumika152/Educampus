@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Course Details - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>EduCampus</h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="Search..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="marathi">Marathi</option>
+                            <option value="malayalam">Malayalam</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                          <option value="all">Courses</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">javascript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">Css</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Sci</option>
+                        </select>
+                    </li>
+                <li><a href="#about">About us</a></li>
+                <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar-cart">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+            
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>Data Science</h1>
+                <p class="program-type">Nanodegree Program</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(312)</span>
+                </div>
+
+                <p class="description">
+                    This comprehensive Data Science course covers essential techniques and tools to analyze and interpret complex data. Gain practical experience in machine learning, statistical analysis, and data visualization.
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;2000 </span> <span class="original-price"> &#8377;3000</span> </b></button>
+                    <button class="enroll-btn" data-course-id="data sci" data-course-name="Data Science" data-course-price="2000"><b>Enroll Now</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Checkout</h2>
+                            <p><b>Course ID:</b> <span id="modal-course-id"></span></p>
+                            <p><b>Course Name:</b> <span id="modal-course-name"></span></p>
+                            <p><b>Price:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>Quantity:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">Pay</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="datascience" data-course-title="Data Science Course" data-course-price="2000"><b>Add to Cart</b></button>
+                </div>
+
+                <p><b>Course Includes -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> Beginner to Advanced</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 60 Hours</span>
+                    <span class="meta-item"><i class="icon-projects"></i> Real-World Projects</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> Course Completion Certificate</span>
+                    <span class="meta-item"><i class="icon-updated"></i> Last Updated July 29, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>Skills you'll learn:</h3>
+                    <p>• Data cleaning and preprocessing
+                        • Exploratory data analysis
+                        • Machine learning algorithms
+                        • Data visualization with Python and R</p>
+                </div>
+            </div>
+            <div class="courseimage">
+                <img class="courseimage1" src="images/Datasc.jpeg" alt="Data Science">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">Course Content</h3>
+                <div class="popup-content">
+                    <h3>Module 1 - Introduction to Data Science</h3>
+                    <ul class="arrange">
+                        <li>What is Data Science?</li>
+                        <li>Data Science lifecycle</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>Key tools and technologies</li>
+                            <li>Basic statistics and probability</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">Read More</button>
+
+                    <h3>Module 2 - Data Cleaning and Preprocessing</h3>
+                    <ul class="arrange">
+                        <li>Data wrangling techniques</li>
+                        <li>Handling missing values</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>Feature scaling and transformation</li>
+                            <li>Data encoding and transformation</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">Read More</button>
+
+                    <h3>Module 3 - Exploratory Data Analysis (EDA)</h3>
+                    <ul class="arrange">
+                        <li>Data visualization techniques</li>
+                        <li>Descriptive statistics</li>
+                        <span class="additional-content" id="additional-content-3">
+                            <li>Correlation and causation analysis</li>
+                            <li>EDA with Python and R</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-3">Read More</button>
+
+                    <h3>Module 4 - Machine Learning</h3>
+                    <ul class="arrange">
+                        <li>Supervised vs. unsupervised learning</li>
+                        <li>Classification and regression algorithms</li>
+                        <span class="additional-content" id="additional-content-4">
+                            <li>Model evaluation and validation</li>
+                            <li>Hyperparameter tuning</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-4">Read More</button>
+
+                    <h3>Module 5 - Data Visualization</h3>
+                    <ul class="arrange">
+                        <li>Creating interactive dashboards</li>
+                        <li>Data visualization with Matplotlib and Seaborn</li>
+                        <span class="additional-content" id="additional-content-5">
+                            <li>Advanced visualization techniques</li>
+                            <li>Communicating insights effectively</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-5">Read More</button>
+                </div>
+                <div class="prerequisites">
+                    <h3>Prerequisites:</h3>
+                    <p>Basic understanding of statistics and programming</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <h3>Demo Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RBSUwFGa6Fk" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+        </section>
+
+        <div class="container">
+            <div class="heading"><b>Taught By The Best</b></div>
+            <div class="profiles">
+                <div class="profile-card">
+                    <img src="images/male.png" alt="Jane Doe">
+                    <h3>Jane Doe</h3>
+                    <h4>Data Scientist, Data Solutions Inc.</h4>
+                    <p>Jane is a seasoned data scientist with extensive experience in machine learning and data analysis, specializing in transforming complex data into actionable insights.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/male2.png" alt="John Smith">
+                    <h3>John Smith</h3>
+                    <h4>Data Analyst, Tech Innovators</h4>
+                    <p>John has a strong background in data analytics and visualization, using his expertise to guide learners through the practical applications of data science tools.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <span class="rating">⭐ Reviews and Ratings</span>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">AK</div>
+                        <div class="user-info">
+                            <span class="user-name">Ashok Reddy</span>
+                            <span class="review-date">a week ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>The course helps me a lot in studying Data science. Moreover, John teaches and explains definitions and mechanisms behind the scenes with a handful of practical examples carefully and thoroughly.</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">DK</div>
+                        <div class="user-info">
+                            <span class="user-name">Dinesh Kumar</span>
+                            <span class="review-date">3 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>It was a great learning experience, before enrolling to this course I started from absolute zero but now I'm confident enough to challenge myself even more, to land a job and continue learning :)</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+    <section class="course-recommendations">
+        <h2>Course Recommendations</h2>
+        <div class="recommendations">
+            <div class="recommendation">
+                <img src="images/javascript.jpeg" alt="Course 1">
+                <a href="course-details.html" class="btn btn-primary"><h4>JavaScript</h4></a>
+                <p class="card-text">Bring your web pages to life</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/react.jpeg" alt="Course 2">
+                <a href="React.html" class="btn btn-primary"><h4>React</h4></a>
+                <p>Short description of Course 2.</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/angularjs.jpeg" alt="Course 2">
+                <a href="Angular.html" class="btn btn-primary"><h4>Angular</h4></a>
+                <p>Short description of Course 2.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <div class="FAQ">
+            <h3>Frequently Asked Questions</h3>
+    
+            <details class="faq-item">
+                <summary> What topics are covered in the course?</summary>
+                <p>The course covers  Supervised and unsupervised learning, Data clening and Modal Evaluation</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Are there any hands-on projects or exercises included?</summary>
+                <p>Yes, the course includes multiple hands-on projects and exercises to help you apply what you’ve learned and build practical skills.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Will the course help me get a job as a developer?</summary>
+                <p>While the course provides the necessary skills and knowledge to become proficient in data Science, landing a job also depends on other factors such as your overall skill set, experience, portfolio, and job market conditions. The course will help you build a strong foundation and prepare you for further learning and job applications.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary>How can I access the course content?</summary>
+                <p>The course content can be accessed online through the course platform, which is compatible with both desktop and mobile devices.</p>
+            </details>
+        </div>
+    </main>
+   
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Learning Resources</h4>
+                <ul>
+                    <li><a href="#">Learning courses</a></li>
+                    <li><a href="#">Practice Problems</a></li>
+                    <li><a href="#">EduCampus Blogs</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Programming Tools</h4>
+                <ul>
+                    <li><a href="#">Online IDE</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Host Rated Contest</a></li>
+                    <li><a href="#">Problem Setting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#">EduCampus For Colleges</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Code Of Conduct</a></li>
+                    <li><a href="#">User Ranklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Usage Policy</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Other Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 www.EduCampus.com. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Edit Links Modal -->
+    <div id="editLinksModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeEditLinksModal">&times;</span>
+            <h2>Edit Social Media Links</h2>
+            <div class="form-group">
+                <label for="websiteLinkInput">Website</label>
+                <input type="text" id="websiteLinkInput" placeholder="Enter your website link">
+            </div>
+            <div class="form-group">
+                <label for="githubLinkInput">GitHub</label>
+                <input type="text" id="githubLinkInput" placeholder="Enter your GitHub link">
+            </div>
+            <div class="form-group">
+                <label for="linkedinLinkInput">LinkedIn</label>
+                <input type="text" id="linkedinLinkInput" placeholder="Enter your LinkedIn link">
+            </div>
+            <div class="form-group">
+                <label for="instagramLinkInput">Instagram</label>
+                <input type="text" id="instagramLinkInput" placeholder="Enter your Instagram link">
+            </div>
+            <div class="form-group">
+                <label for="facebookLinkInput">Facebook</label>
+                <input type="text" id="facebookLinkInput" placeholder="Enter your Facebook link">
+            </div>
+            <button class="save-btn" id="saveLinksBtn">Save Links</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+
+</html>

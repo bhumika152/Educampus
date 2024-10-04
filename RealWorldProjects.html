@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real World Projects in Technology</title>
+    <script src="loginscript.js"></script>
+    <link rel="stylesheet" href="RealWorldStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="logo">Edu Campus</div>
+    </nav>
+
+    <header>
+        <h1>Real World Projects in Technology</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#web-development">Web Development</a></li>
+            <li><a href="#mobile-apps">Mobile Apps</a></li>
+            <li><a href="#machine-learning">Machine Learning</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="web-development">
+            <h2>Web Development Projects</h2>
+            <div class="project">
+                <h3>Edu Campus</h3>
+                <p>A comprehensive edutech platform featuring courses, ratings, and more.</p>
+                <button onclick="toggleDetails('edu-campus-details')">Show Details</button>
+                <div id="edu-campus-details" class="details">
+                    <p>Technologies: HTML, CSS, JavaScript</p>
+                    <p>Features: Search bar, theme toggle, course navigation, rating display.</p>
+                </div>
+            </div>
+        </section>
+        <section id="mobile-apps">
+            <h2>Mobile App Projects</h2>
+            <div class="project">
+                <h3>Medify App</h3>
+                <p>An app for managing healthcare with user authentication and real-time chat.</p>
+                <button onclick="toggleDetails('medify-details')">Show Details</button>
+                <div id="medify-details" class="details">
+                    <p>Technologies: Flutter, Firebase</p>
+                    <p>Features: Diagnosis search, appointment scheduling, medication management.</p>
+                </div>
+            </div>
+        </section>
+        <section id="machine-learning">
+            <h2>Machine Learning Projects</h2>
+            <div class="project">
+                <h3>Image Recognition</h3>
+                <p>A project focused on recognizing images using neural networks.</p>
+                <button onclick="toggleDetails('image-recognition-details')">Show Details</button>
+                <div id="image-recognition-details" class="details">
+                    <p>Technologies: Python, TensorFlow</p>
+                    <p>Features: High accuracy image recognition, real-time processing.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+
+  <div class="site-footer">
+    <div class="container1">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">EduCampus is an edutech platform dedicated to providing education in Computer Science and Engineering subjects in multiple Indian languages. Our mission is to make quality education accessible to everyone, with features like expert mentoring, real-world projects, and virtual labs.</p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Follow Us</h6>
+          <ul class="social-icons">
+            <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container1">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
+       <a>EduCampus</a>.
+        </p>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+    <script src="RWscripts.js"></script>
+</body>
+</html>

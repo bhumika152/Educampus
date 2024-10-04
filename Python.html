@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>   
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left ">
+                <a href="index.html"><h3>EduCampus</h3></a> 
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="Search..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="marathi">Marathi</option>
+                            <option value="malayalam">Malayalam</option>
+                        </select>
+                    </li>
+                  
+                  
+                    <li>
+                        <select id="course-list">
+                          <option value="all">Courses</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">javascript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">Css</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Sci</option>
+                        </select>
+                    </li>
+            <li><a href="#about">About us</a></li>
+            <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li class="navbar-cart">
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i>
+        
+                </a>
+            </li>
+                   
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            
+            <div class="course-info">
+                <h1>Python</h1>
+                <p class="program-type">Nanodegree Program</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(729)</span>
+                </div>
+
+                <p class="description">
+                    The goal of this program is to prepare students for roles in software development, data analysis, and automation that require advanced Python skills.
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;1500 </span> <span class="original-price"> &#8377;2500</span> </b></button>
+                    <button class="enroll-btn" data-course-id="python" data-course-name="Python" data-course-price="1500"><b>Enroll Now</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Checkout</h2>
+                            <p><b>Course ID:</b> <span id="modal-course-id"></span></p>
+                            <p><b>Course Name:</b> <span id="modal-course-name"></span></p>
+                            <p><b>Price:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>Quantity:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">Pay</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="python" data-course-title="Python Course" data-course-price="1500"><b>Add to Cart</b></button>
+
+                </div>
+
+                <p><b>Course Include -</b> </p>
+                <div class="course-meta">
+                    
+                    <span class="meta-item"><i class="icon-level"></i> Intermediate</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 25 Hours</span>
+                    <span class="meta-item"><i class="icon-projects"></i> Real-World Projects</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> Course Completion Certificate</span>
+                    <span class="meta-item"><i class="icon-updated"></i> Last Updated June 30, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>Skills you'll learn:</h3>
+                    <p>• Build core programming concepts
+                        • Learn Python programming fundamentals
+                        • Develop automation scripts and data analysis tools</p>
+                </div>
+               
+            </div>
+            <div class="courseimage"><img class="courseimage1" src="images/Python.jpeg" alt="python">
+            </div>
+   
+            
+           </section>
+<section class="course-content-and-video">
+    <div>
+                <h3 class="course-content">Course Content</h3>
+
+                        <div class="popup-content">
+                            <h3>Module 1 - Python Basics</h3>
+                            <ul class="arrange">
+                                <li>Introduction to Python</li>
+                                <li>Basic syntax and operations</li>
+                                <span class="additional-content" id="additional-content-1">
+                                    <li>Data types and variables</li>
+                                    <li>Control flow (loops and conditionals)</li>
+                                    <li>Functions and modules</li>
+                                    <li>File handling</li>
+                                    <li>Error handling</li>
+                                </span>
+                            </ul>
+                            <button class="read-more-button" data-content-id="additional-content-1">Read More</button>
+                       
+                            <h3>Module 2 - Intermediate Python Programming</h3>
+                            <ul class="arrange">
+                                <li>Object-oriented programming</li>
+                                <li>Data structures (lists, tuples, dictionaries)</li>
+                                <span class="additional-content" id="additional-content-2">
+                                    <li>Regular expressions</li>
+                                    <li>Modules and packages</li>
+                                    <li>Decorators and generators</li>
+                                    <li>Unit testing</li>
+                                    <li>Python libraries (NumPy, Pandas)</li>
+                                </span>
+                            </ul>
+                            <button class="read-more-button" data-content-id="additional-content-2">Read More</button>
+                       
+                            <h3>Module 3 - Advanced Python Concepts</h3>
+                            <ul class="arrange">
+                                <li>Web scraping with BeautifulSoup</li>
+                                <li>Data visualization with Matplotlib</li>
+                                <span class="additional-content" id="additional-content-3">
+                                    <li>Working with APIs</li>
+                                    <li>Concurrency and parallelism</li>
+                                    <li>Advanced data manipulation</li>
+                                    <li>Building web applications with Flask/Django</li>
+                                    <li>Deployment and best practices</li>
+                                </span>
+                            </ul>
+                            <button class="read-more-button" data-content-id="additional-content-3">Read More</button>
+                        
+                        </div>
+                <div class="prerequisites">
+                    <h3>Prerequisites:</h3>
+                    <p>Basic understanding of programming concepts is recommended.</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <h3>Demo Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kqtD5dpn9C8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            </section>
+            
+        <div class="container">
+            <div class="heading"><b>Taught By The Best</b></div>
+            <div class="profiles">
+                <div class="profile-card">
+                    <img src="https://img-b.udemycdn.com/course/240x135/3836848_42cf_3.jpg" alt="Priyanka Jain">
+                    <h3>Priyanka Jain</h3>
+                    <h4>Software Developer, Google</h4>
+                    <p>Priyanka works as senior software developer at Google. She holds an MS in Computer Science from the University of Southern California and has spent more than a decade in the industry.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZG8e4kokHZmsf15zrPOj6ENoPRnFXCnzz5w&s" alt="Melissa Hong">
+                    <h3>Melissa Hong</h3>
+                    <h4>Data Scientist, Facebook</h4>
+                    <p>Melissa is a Data Scientist at Facebook, specializing in machine learning and data analysis. She has a PhD in Data Science from MIT and a passion for teaching complex concepts.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAA38h_SmrmvPlb2C9lzU4XkNswITnRzeW4A&s" alt="Arjun Patel">
+                    <h3>Arjun Patel</h3>
+                    <h4>Senior Python Developer, Amazon</h4>
+                    <p>Arjun has over 15 years of experience in Python development and currently works as a Senior Python Developer at Amazon. He is known for his expertise in system architecture and scalable applications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header">
+                <span class="rating">⭐ Reviews and Ratings</span>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">AK</div>
+                        <div class="user-info">
+                            <span class="user-name">Ashok Reddy</span>
+                            <span class="review-date">a week ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>The course helps me a lot in studying Python programming language. Moreover, Arjun teaches and explains definitions and mechanisms behind the scenes with a handful of practical examples carefully and thoroughly.</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">DK</div>
+                        <div class="user-info">
+                            <span class="user-name">Dinesh Kumar</span>
+                            <span class="review-date">3 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>It was a great learning experience, before enrolling to this course I started from absolute zero but now I'm confident enough to challenge myself even more, to land a job and continue learning :)</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+    <section class="course-recommendations">
+        <h2>Course Recommendations</h2>
+        <div class="recommendations">
+            <div class="recommendation">
+                <img src="images/Datasc.jpeg" alt="Course 1">
+                <a href="DataScience.html" class="btn btn-primary"><h4>Data Science</h4></a>
+                <p class="card-text">Dive into the World of Data Science</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/AI.jpeg" alt="Course 2">
+                <a href="Ai.html" class="btn btn-primary"><h4>AI</h4></a>
+                <p>Slowly AI comes in the real world.</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/powerbi.jpeg" alt="Course 2">
+                <a href="PowerBi.html" class="btn btn-primary"><h4>Power Bi</h4></a>
+                <p>Ease Your Analysis among complex datasets</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <div class="FAQ">
+            <h3>Frequently Asked Questions</h3>
+    
+            <details class="faq-item">
+                <summary> What topics are covered in the course?</summary>
+                <p>The course covers Tuples, lists , dictionaries and python libraries like pandas and numpy</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Are there any hands-on projects or exercises included?</summary>
+                <p>Yes, the course includes multiple hands-on projects and exercises to help you apply what you’ve learned and build practical skills.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Will the course help me get a job as a developer?</summary>
+                <p>While the course provides the necessary skills and knowledge to become proficient in Python programming language, landing a job also depends on other factors such as your overall skill set, experience, portfolio, and job market conditions. The course will help you build a strong foundation and prepare you for further learning and job applications.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary>How can I access the course content?</summary>
+                <p>The course content can be accessed online through the course platform, which is compatible with both desktop and mobile devices.</p>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Learning Resources</h4>
+                <ul>
+                    <li><a href="#">Learning courses</a></li>
+                    <li><a href="#">Practice Problems</a></li>
+                    <li><a href="#">EduCampus Blogs</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Programming Tools</h4>
+                <ul>
+                    <li><a href="#">Online IDE</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Host Rated Contest</a></li>
+                    <li><a href="#">Problem Setting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#">EduCampus For Colleges</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Code Of Conduct</a></li>
+                    <li><a href="#">User Ranklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Usage Policy</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Other Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 www.EduCampus.com. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+
+</html>
+   

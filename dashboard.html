@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="dashboardstyle.css">
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="common.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index1.html"><h3><b>EduCampus</b></h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="Search..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="marathi">Marathi</option>
+                            <option value="malayalam">Malayalam</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                            <option value="all">Courses</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">JavaScript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">CSS</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Sci</option>
+                        </select>
+                    </li>
+                    <li><a href="#about-us"><b>About Us</b></a></li>
+                    <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="navbar-cart">
+                        <a id="profile-icon" class="profile-icon" href="dashboard.html">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <img src="images/bhumika professional pic.jpg" alt="Avatar" class="profile-img">
+                    <h2 id="spacing">Bhumika Raheja</h2>
+                    <p>Full Stack Developer</p>
+                    <p>BML Munjal University, Gurugram</p>
+                    <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                    <button class="follow-btn" onclick="document.getElementById('fileInput').click();">Edit Picture</button>
+                    <button class="message-btn" id="editLinksBtn">Edit Links</button>
+                    <ul class="social-links">
+                        <li><a id="websiteLink" href="#">Website</a></li>
+                        <li><a id="githubLink" href="https://github.com/bhumika152">Github</a></li>
+                        <li><a id="linkedinLink" href="https://www.linkedin.com/in/bhumika-raheja/">LinkedIn</a></li>
+                        <li><a id="instagramLink" href="#">Instagram</a></li>
+                        <li><a id="facebookLink" href="#">Facebook</a></li>
+                    </ul>
+                    <button class="follow-btn" id="signOutBtn">Sign Out</button>
+
+                </div>
+                <div class="profile-content">
+                    <h3 id="spacing">Edit Profile</h3>
+                    <form id="form-profile">
+                        <label id="label-profile" for="fullname">Full Name</label>
+                        <input id="input-profile" type="text" id="fullname" value="Bhumika Raheja">
+                        <label id="label-profile" for="email">Email</label>
+                        <input id="input-profile" type="email" id="email" value="braheja@gmail.com">
+                        <label id="label-profile" for="phone">Phone</label>
+                        <input id="input-profile" type="tel" id="phone" value="+91-7206552647">
+                        <label id="label-profile" for="mobile">Mobile</label>
+                        <input id="input-profile" type="tel" id="mobile" value="+91-7206552647">
+                        <label id="label-profile" for="address">Address</label>
+                        <input id="input-profile" type="text" id="address" value="Fatehabad Haryana">
+                      
+                        <button type="submit" class="save-btn" id="saveChangesBtn">Save Changes</button>
+                        <p id="confirmationMessage" style="display: none; color: green; margin-top: 10px;">Profile changes saved successfully!</p>
+                        
+
+                    </form>
+                    <h3 id="spacing">Project Status</h3>
+                    <ul class="progress-list">
+                        <li>Web Design <span class="progress-bar blue"></span></li>
+                        <li>Website Markup <span class="progress-bar red"></span></li>
+                        <li>One Page <span class="progress-bar green"></span></li>
+                        <li>Mobile Template <span class="progress-bar yellow"></span></li>
+                        <li>Backend API <span class="progress-bar blue"></span></li>
+                        <button class="add-btn" id="addProjectBtn">Add more Projects</button>
+                    </ul>
+                    <div class="certifications">
+                        <h3>My Certifications</h3>
+                        <div id="certificatesContainer"></div> <!-- Add this container -->
+                        <img src="images/certificate.png" alt="certificate">
+                        <input type="file" id="certFileInput" style="display: none;" accept="image/*">
+                        <button class="add-btn" id="addCertBtn">Add Certificates</button>
+                        <button class="add-btn" id="RemoveBtn">Remove</button>
+                    </div>
+                    <div class="certifications">
+                        <h3>My Badges</h3>
+                        <div id="badgesContainer"></div> <!-- Add this container -->
+                        <img src="images/badge.png" alt="badge">
+                        <input type="file" id="badgeFileInput" style="display: none;" accept="image/*">
+                        <button class="add-btn" id="addBadgeBtn">Add Badges</button>
+                        <button class="add-btn" id="RemoveBtn">Remove</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Learning Resources</h4>
+                <ul>
+                    <li><a href="#">Learning courses</a></li>
+                    <li><a href="#">Practice Problems</a></li>
+                    <li><a href="#">EduCampus Blogs</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Programming Tools</h4>
+                <ul>
+                    <li><a href="#">Online IDE</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Host Rated Contest</a></li>
+                    <li><a href="#">Problem Setting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#">EduCampus For Colleges</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Code Of Conduct</a></li>
+                    <li><a href="#">User Ranklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Usage Policy</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Other Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 www.EduCampus.com. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Pop-up Modal for Editing Links -->
+    <div id="editLinksModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Social Media Links</h2>
+            <form id="editLinksForm">
+                <label for="website">Website:</label>
+                <input type="url" id="website" placeholder="Website"><br>
+                <label for="github">GitHub:</label>
+                <input type="url" id="github" placeholder="GitHub"><br>
+                <label for="linkedin">LinkedIn:</label>
+                <input type="url" id="linkedin" placeholder="LinkedIn"><br>
+                <label for="instagram">Instagram:</label>
+                <input type="url" id="instagram" placeholder="Instagram"><br>
+                <label for="facebook">Facebook:</label>
+                <input type="url" id="facebook" placeholder="Facebook"><br>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+         // Handle the pop-up modal for editing links
+    var modal = document.getElementById("editLinksModal");
+    var btn = document.getElementById("editLinksBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.getElementById("editLinksForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        document.getElementById("websiteLink").href = document.getElementById("website").value || "#";
+        document.getElementById("githubLink").href = document.getElementById("github").value || "https://github.com/bhumika152";
+        document.getElementById("linkedinLink").href = document.getElementById("linkedin").value || "https://www.linkedin.com/in/bhumika-raheja/";
+        document.getElementById("instagramLink").href = document.getElementById("instagram").value || "#";
+        document.getElementById("facebookLink").href = document.getElementById("facebook").value || "#";
+
+        modal.style.display = "none";
+    });
+
+    // Add Certifications
+    document.getElementById('addCertBtn').onclick = function() {
+        document.getElementById('certFileInput').click();
+    }
+
+    document.getElementById('certFileInput').onchange = function(event) {
+        const files = event.target.files;
+        const container = document.getElementById('certificatesContainer');
+        for (let i = 0; i < files.length; i++) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(files[i]);
+            img.alt = 'Certificate';
+            img.classList.add('certificate-img');
+            container.appendChild(img);
+        }
+    }
+
+    // Add Badges
+    document.getElementById('addBadgeBtn').onclick = function() {
+        document.getElementById('badgeFileInput').click();
+    }
+
+    document.getElementById('badgeFileInput').onchange = function(event) {
+        const files = event.target.files;
+        const container = document.getElementById('badgesContainer');
+        for (let i = 0; i < files.length; i++) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(files[i]);
+            img.alt = 'Badge';
+            img.classList.add('badge-img');
+            container.appendChild(img);
+        }
+    }
+
+    document.getElementById('addProjectBtn').onclick = function() {
+    const projectList = document.querySelector('.progress-list');
+    
+    // Prompt the user for a project name
+    const projectName = prompt('Enter project name:') || 'New Project ' + (projectList.children.length + 1);
+
+    const projectProgress = prompt('Enter project progress percentage:') || 0;
+
+    const newProject = document.createElement('li');
+    newProject.textContent = projectName + ' ';
+
+    const progressBar = document.createElement('span');
+    progressBar.classList.add('progress-bar', 'blue');
+    progressBar.style.width = projectProgress + '%';
+    progressBar.textContent = projectProgress + '%';
+
+    newProject.appendChild(progressBar);
+    
+    // Add the new project to the top of the list
+    projectList.insertBefore(newProject, projectList.firstChild);
+};
+    // Save Changes Button
+    document.getElementById('saveChangesBtn').onclick = function(event) {
+        event.preventDefault();
+        document.getElementById('confirmationMessage').style.display = 'block';
+        setTimeout(function() {
+            document.getElementById('confirmationMessage').style.display = 'none';
+        }, 2000);
+    }
+
+    // Remove Last Added Certification/Badge
+    document.getElementById('RemoveBtn').onclick = function() {
+        const certContainer = document.getElementById('certificatesContainer');
+        const badgeContainer = document.getElementById('badgesContainer');
+        if (certContainer.lastElementChild) {
+            certContainer.removeChild(certContainer.lastElementChild);
+        } else if (badgeContainer.lastElementChild) {
+            badgeContainer.removeChild(badgeContainer.lastElementChild);
+        }
+    }
+document.getElementById('signOutBtn').addEventListener('click', function() {
+    
+    window.location.href = 'index.html';
+});
+   // Handle the image update
+   document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.querySelector('.profile-img').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('saveChangesBtn').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior if this is within a form
+    const messageElement = document.getElementById('confirmationMessage');
+    messageElement.style.display = 'block'; // Show the message
+    messageElement.textContent = 'Profile changes saved successfully!'; // Set the message text
+
+    // Optionally, hide the message after a few seconds
+    setTimeout(function() {
+        messageElement.style.display = 'none';
+    }, 3000); // Hide after 3 seconds
+});
+
+
+    </script>
+</body>
+</html>

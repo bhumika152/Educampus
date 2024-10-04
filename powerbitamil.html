@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Course Details - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>EduCampus</h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="Search..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="tamil">தமிழ்</option>
+                            <option value="kannada">ಕನ್ನಡ</option>
+                            <option value="bengali">বাংলা</option>
+                            <option value="marathi">मराठी</option>
+                            <option value="malayalam">മലയാളം</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                          <option value="all">Courses</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power BI</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">JavaScript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">CSS</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Science</option>
+                        </select>
+                    </li>
+                <li><a href="#about">About us</a></li>
+                <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar-cart">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+            
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>Power BI</h1>
+                <p class="program-type">Nanodegree Program</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(254)</span>
+                </div>
+
+                <p class="description">
+                    இந்த Power BI பாடம் தரவுப் படங்களையும், வணிக நுண்ணறிவையும் ஆழமாக ஆராய்ந்து, நீங்கள் செயல்திறனான அறிக்கைகள் மற்றும் டாஷ்போர்டுகளை உருவாக்க திறனை வழங்குகிறது.
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;800</span> <span class="original-price"> &#8377;1500</span> </b></button>
+                    <button class="enroll-btn" data-course-id="powerbi" data-course-name="Power Bi" data-course-price="800"><b>Enroll Now</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Checkout</h2>
+                            <p><b>Course ID:</b> <span id="modal-course-id"></span></p>
+                            <p><b>Course Name:</b> <span id="modal-course-name"></span></p>
+                            <p><b>Price:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>Quantity:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">Pay</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="powerbi" data-course-title="Power BI Course" data-course-price="800"><b>Add to Cart</b></button>
+                </div>
+
+                <p><b>Course Include -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> ஆரம்ப நிலையில் இருந்து மேம்பட்ட நிலை</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 40 மணி நேரம்</span>
+                    <span class="meta-item"><i class="icon-projects"></i> சிக்கலான உலக உண்மையிலான திட்டங்கள்</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> பாடம் முடிப்பு சான்றிதழ்</span>
+                    <span class="meta-item"><i class="icon-updated"></i> கடந்த புதுப்பிப்பு: ஜூலை 29, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>நீங்கள் கற்றுக் கொள்ளக்கூடிய திறன்கள்:</h3>
+                    <p>• இடைக்கால டாஷ்போர்டுகளை உருவாக்குதல்
+                        • தரவுக் கண்காணிப்பு மற்றும் மாற்றம்
+                        • பல தரவுப் ஆதாரங்களுடன் Power BI ஐ ஒருங்கிணைத்தல்
+                        • மேம்பட்ட தரவுப் படிப்புத்திறன்கள்</p>
+                </div>
+            </div>
+            <div class="courseimage">
+                <img class="courseimage1" src="images/powerbi.jpeg" alt="Power BI Course">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">பாடநூல் உள்ளடக்கம்</h3>
+                <div class="popup-content">
+                    <h3>மாடியூல் 1 - Power BI அறிமுகம்</h3>
+                    <ul class="arrange">
+                        <li>Power BI உடன் தொடக்கம்</li>
+                        <li>Power BI சூழலைப் புரிதல்</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>தரவுகள் இறக்குமதி மற்றும் மாற்றம்</li>
+                            <li>அடிப்படைக் காட்சி உருவாக்கல்</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">மேலும் படிக்க</button>
+        
+                    <h3>மாடியூல் 2 - முன்னணி தரவுத்தொடரமைப்பு</h3>
+                    <ul class="arrange">
+                        <li>சிக்கலான தரவுத்தொடரமைப்புகளை உருவாக்குதல்</li>
+                        <li>DAX செயல்பாடுகளை உருவாக்குதல் மற்றும் பயன்படுத்துதல்</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>அனுபவ அளவைகள் மற்றும் கணக்கீடுகள்</li>
+                            <li>தரவுத்தொடர்புகள் மற்றும் அமைப்புகள்</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">மேலும் படிக்க</button>
+        
+                    <h3>மாடியூல் 3 - Power BI டாஷ்போர்டுகள் மற்றும் அறிக்கைகள்</h3>
+                    <ul class="arrange">
+                        <li>இணர்வுமிக்க டாஷ்போர்டுகளை வடிவமைத்தல்</li>
+                        <li>அறிக்கைகளை வெளியிடல் மற்றும் பகிர்வு</li>
+                        <span class="additional-content" id="additional-content-3">
+                            <li>Power BI சேவை மற்றும் Power BI மொபைல்</li>
+                            <li>செயல்திறனை மேம்படுத்தல்</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-3">மேலும் படிக்க</button>
+                </div>
+                <div class="prerequisites">
+                    <h3>முன்னணி தேவைகள்:</h3>
+                    <p>தரவுகளின் பகுப்பாய்வு மற்றும் காட்சி सिद्धாந்தங்களின் அடிப்படை புரிதல்</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <h3>டெமோ வீடியோ</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NNSHu0rkew8" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="heading"><b>மிகவும் சிறந்தவர்களால் கற்பிக்கப்படுகிறது</b></div>
+            <div class="profiles">
+                <div class="profile-card">
+                    <img src="images/lady.png" alt="அன்னா ஸ்மித்">
+                    <h3>அன்னா ஸ்மித்</h3>
+                    <h4>தரவுத்துணுக்கர், DataTech</h4>
+                    <p>அன்னா, Power BI ஐப் பயன்படுத்தி வணிக ஆதாரங்களை இயக்குவதில் விரிவான அனுபவம் உடையவர்.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/male2.png" alt="டேவிட் ஜான்சன்">
+                    <h3>டேவிட் ஜான்சன்</h3>
+                    <h4>வணிக நுண்ணறிவு நிபுணர், InsightCorp</h4>
+                    <p>டேவிட், Power BI இன் முன்னணி அம்சங்கள் மற்றும் திறன்களில் ஆழமான புரிதல் கொண்டவர்.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="header">
+                <span class="rating">⭐ விமர்சனங்கள் மற்றும் மதிப்பீடுகள்</span>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">AK</div>
+                        <div class="user-info">
+                            <span class="user-name">அஷோகா ரெட்டி</span>
+                            <span class="review-date">ஒரு வாரம் முந்தையது</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>இந்த पाठம் Power BI கற்றுக்கொள்வதில் எனக்கு மிகவும் உதவுகிறது. மேலும், டேவிட் விளக்கங்களையும் செயல்முறைகளையும் ஆழமாகவும், முறையாகவும் பயிற்சிகள் மூலம் விவரிக்கிறார்.</p>
+                    </div>
+                    <div class="helpful">
+                        <span>உதவிகரமானது?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">DK</div>
+                        <div class="user-info">
+                            <span class="user-name">தினேஷ் குமார்</span>
+                            <span class="review-date">3 வாரங்கள் முந்தையது</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>அந்த பயிற்சியான அனுபவம் மிகவும் சிறந்தது, இந்த பாடத்தை பதிவு செய்யும் முன் நான் முழுமையான நுழைவிலிருந்து தொடங்கினேன் ஆனால் இப்போது என்னால் எனது திறன்களை மேலும் சவால் செய்ய நம்பிக்கையாக உள்ளேன், வேலை பெறும் மற்றும் மேலும் கற்றுக் கொள்ள :)</p>
+                    </div>
+                    <div class="helpful">
+                        <span>உதவிகரமானது?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="course-recommendations">
+            <h2>பாடநூல் பரிந்துரைகள்</h2>
+            <div class="recommendations">
+                <div class="recommendation">
+                    <img src="images/Datasc.jpeg" alt="பாடநூல் 1">
+                    <a href="DataScience.html" class="btn btn-primary"><h4>தரவியல்</h4></a>
+                    <p class="card-text">தரவியல் உலகத்தில் நுழையுங்கள்</p>
+                </div>
+                <div class="recommendation">
+                    <img src="images/AI.jpeg" alt="பாடநூல் 2">
+                    <a href="Ai.html" class="btn btn-primary"><h4>ஏஐ</h4></a>
+                    <p>மெதுவாக ஏஐ உண்மையிலேயே வருகிறது</p>
+                </div>
+                <div class="recommendation">
+                    <img src="images/mysql.png" alt="பாடநூல் 3">
+                    <a href="MysqlCourse.html" class="btn btn-primary"><h4>MySQL</h4></a>
+                    <p>உங்கள் தரவுத்தொகுப்புகளை எளிதாக கையாள்தல்</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="FAQ">
+            <h3>பெரும்பாலும் கேட்கப்படும் கேள்விகள்</h3>
+        
+            <details class="faq-item">
+                <summary>இந்த பாடத்தில் என்ன தலைப்புகள் உள்ளன?</summary>
+                <p>இந்த பாடம் தொடர்பான டாஷ்போர்டுகள், செயல்பாட்டுக் கோப்புகள், தரவுப் பகுப்பாய்வு அடிப்படைகள் போன்றவற்றை நகற்றுகிறது.</p>
+            </details>
+        
+            <details class="faq-item">
+                <summary>எப்போது கைபயிற்சிகள் அல்லது பயிற்சிகள் உள்ளனவா?</summary>
+                <p>ஆம், பாடம் நீங்கள் கற்றுக்கொண்டதைப் பயன்படுத்த உதவுமாறும், நடைமுறை திறன்களை உருவாக்க உதவுமாறும் பல கைபயிற்சிகளை மற்றும் பயிற்சிகளை கொண்டுள்ளது.</p>
+            </details>
+        
+            <details class="faq-item">
+                <summary>இந்த பாடம் என்னை உருவாக்குநராக வேலை பெற உதவுமா?</summary>
+                <p>இந்த பாடம் Power BI ஐப் பயன்படுத்துவதில் திறமைகளை மற்றும் அறிவுகளை வழங்குகிறது, ஆனால் வேலை பெறுவது உங்கள் மொத்த திறன் மையம், அனுபவம், போர்ட்ஃபோலியோ மற்றும் வேலை சந்தை நிலைமை போன்ற பிற காரணிகள் மீதுமானதாகும். இந்த பாடம் உங்களுக்கு ஒரு வலுவான அடித்தளத்தை உருவாக்க உதவும் மற்றும் மேலதிக கற்றல் மற்றும் வேலை விண்ணப்பங்களுக்கு தயாராக இருக்கும்.</p>
+            </details>
+        
+            <details class="faq-item">
+                <summary>பாடத்தின் உள்ளடக்கம் எப்போது அணுகலாம்?</summary>
+                <p>பாடத்தின் உள்ளடக்கம், டெஸ்க்டாப் மற்றும் மொபைல் சாதனங்கள் ஆகியவற்றுடன் பொருந்தக்கூடிய பாடத் தளத்தின் மூலம் ஆன்லைனில் அணுகப்படலாம்.</p>
+            </details>
+        
+            <details class="faq-item">
+                <summary>நான் எவ்வாறு உதவி பெறலாம்?</summary>
+                <p>எந்தக் கேள்விகள் இருந்தாலும் அல்லது உதவிய தேவையெனில், உங்கள் பயனர் கணக்கில் சென்று உதவி / ஆதரவு பகுதியைப் பயன்படுத்தவும். நீங்கள் உங்கள் பயனர் கணக்கில் பதிவு செய்யும் அனைத்து அனுமதிகளைப் பெறலாம்.</p>
+            </details>
+        </div>
+        

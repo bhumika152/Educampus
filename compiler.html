@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler</title>
+    <link rel="stylesheet" href="compiler.css">
+    
+    <script src="loginscript.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="logo">Edu Campus</div>
+    </nav>
+    <div class="contain"> 
+        <div class="html">
+            <label for="html">HTML</label>
+            <textarea id="htmlcode"></textarea>
+
+            <label for="css">CSS</label>
+            <textarea id="csscode"></textarea>
+
+            <label for="js">JS</label>
+            <textarea id="jscode"></textarea>
+        </div>
+        <div class="right">
+            <label for="output"><b>OUTPUT</b></label>
+           <iframe id="output"></iframe>
+        </div>
+    </div>
+    <div class="suscribe">
+        <h4><b>Subscribe for more IDE's</b></h4>
+    </div>
+    <script>
+        document.getElementById('htmlcode').addEventListener('input', updateOutput);
+        document.getElementById('csscode').addEventListener('input', updateOutput);
+        document.getElementById('jscode').addEventListener('input', updateOutput);
+
+        function updateOutput() {
+            let htmlCode = document.getElementById('htmlcode').value;
+            let cssCode = "<style>" + document.getElementById('csscode').value + "</style>";
+            let jsCode = "<script>" + document.getElementById('jscode').value + "<\/script>";
+
+            let output = document.getElementById('output');
+            output.contentDocument.body.innerHTML = htmlCode + cssCode + jsCode;
+        }
+    </script>
+</body>
+</html>

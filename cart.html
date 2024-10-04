@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - EduTeach</title>
+    <link rel="stylesheet" href="cartStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script defer src="cart.js"></script>
+</head>
+<body>
+    <!-- Website Container Starts -->
+    <div class="website-container">
+        <!-- Header Starts -->
+        <header class="header">
+            <a href="index.html" class="logo"><b>EduCampus</b></a>
+            <nav class="main-navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#courses">Courses</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-search"></i></a></li>
+                    <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Header Ends -->
+         
+        <div class="cart">
+            <h1>Your Cart</h1>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be rendered here -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <h2>Cart Summary</h2>
+                <p>Subtotal: &#8377<span id="cart-subtotal">0.00</span></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

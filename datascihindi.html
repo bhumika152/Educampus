@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Course Details - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>EduCampus</h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="खोजें..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">भाषाएँ</option>
+                            <option value="english">अंग्रेजी</option>
+                            <option value="hindi">हिंदी</option>
+                            <option value="punjabi">पंजाबी</option>
+                            <option value="telugu">तेलुगू</option>
+                            <option value="tamil">तमिल</option>
+                            <option value="kannada">कन्नड़</option>
+                            <option value="bengali">बंगाली</option>
+                            <option value="marathi">मराठी</option>
+                            <option value="malayalam">मलयालम</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                          <option value="all">कोर्स</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">JavaScript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">CSS</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Science</option>
+                        </select>
+                    </li>
+                <li><a href="#about">हमारे बारे में</a></li>
+                <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar-cart">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+            
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>डाटा साइंस</h1>
+                <p class="program-type">नैनोडिग्री प्रोग्राम</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(312)</span>
+                </div>
+
+                <p class="description">
+                    यह व्यापक डाटा साइंस कोर्स आवश्यक तकनीकों और उपकरणों को कवर करता है जो जटिल डेटा का विश्लेषण और व्याख्या करने के लिए आवश्यक हैं। मशीन लर्निंग, सांख्यिकी विश्लेषण, और डेटा विज़ुअलाइजेशन में व्यावहारिक अनुभव प्राप्त करें।
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;2000 </span> <span class="original-price"> &#8377;3000</span> </b></button>
+                    <button class="enroll-btn" data-course-id="data sci" data-course-name="Data Science" data-course-price="2000"><b>अब नामांकन करें</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>चेकआउट</h2>
+                            <p><b>कोर्स आईडी:</b> <span id="modal-course-id"></span></p>
+                            <p><b>कोर्स का नाम:</b> <span id="modal-course-name"></span></p>
+                            <p><b>मूल्य:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>मात्रा:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">भुगतान करें</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="datascience" data-course-title="Data Science Course" data-course-price="2000"><b>कार्ट में जोड़ें</b></button>
+                </div>
+
+                <p><b>कोर्स में शामिल है -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> शुरुआत से उन्नत</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 60 घंटे</span>
+                    <span class="meta-item"><i class="icon-projects"></i> वास्तविक-विश्व प्रोजेक्ट्स</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> कोर्स पूरा होने का प्रमाणपत्र</span>
+                    <span class="meta-item"><i class="icon-updated"></i> अंतिम अपडेट 29 जुलाई, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>आप जो कौशल सीखेंगे:</h3>
+                    <p>• डेटा की सफाई और पूर्व-संसाधन
+                        • अन्वेषणात्मक डेटा विश्लेषण
+                        • मशीन लर्निंग एल्गोरिदम
+                        • Python और R के साथ डेटा विज़ुअलाइजेशन</p>
+                </div>
+            </div>
+            <div class="courseimage">
+                <img class="courseimage1" src="images/Datasc.jpeg" alt="Data Science">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">कोर्स सामग्री</h3>
+                <div class="popup-content">
+                    <h3>मॉड्यूल 1 - डेटा साइंस का परिचय</h3>
+                    <ul class="arrange">
+                        <li>डेटा साइंस क्या है?</li>
+                        <li>डेटा साइंस जीवनचक्र</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>मुख्य उपकरण और प्रौद्योगिकियाँ</li>
+                            <li>बुनियादी सांख्यिकी और संभावना</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">अधिक पढ़ें</button>
+
+                    <h3>मॉड्यूल 2 - डेटा सफाई और पूर्व-संसाधन</h3>
+                    <ul class="arrange">
+                        <li>डेटा के झाड़ू लगाने की तकनीकें</li>
+                        <li>गायब मूल्यों को संभालना</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>विशेषता स्केलिंग और रूपांतरण</li>
+                            <li>डेटा एन्कोडिंग और रूपांतरण</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">अधिक पढ़ें</button>
+
+                    <h3>मॉड्यूल 3 - अन्वेषणात्मक डेटा विश्लेषण (EDA)</h3>
+                    <ul class="arrange">
+                        <li>डेटा विज़ुअलाइजेशन की अवधारणाएँ</li>
+                        <li>सांख्यिकीय विश्लेषण तकनीकें</li>
+                        <span class="additional-content" id="additional-content-3">
+                            <li>ग्राफ़ और चार्ट्स बनाना</li>
+                            <li>अन्वेषणात्मक डेटा विश्लेषण के उपकरण</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-3">अधिक पढ़ें</button>
+
+                    <h3>मॉड्यूल 4 - मशीन लर्निंग एल्गोरिदम</h3>
+                    <ul class="arrange">
+                        <li>अवलोकन और अवलोकन एल्गोरिदम</li>
+                        <li>क्लस्टरिंग और वर्गीकरण तकनीकें</li>
+                        <span class="additional-content" id="additional-content-4">
+                            <li>मशीन लर्निंग के सिद्धांत</li>
+                            <li>सहायता प्राप्त तकनीकें और आर्किटेक्चर</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-4">अधिक पढ़ें</button>
+
+                    <h3>मॉड्यूल 5 - डेटा विज़ुअलाइजेशन और रिपोर्टिंग</h3>
+                    <ul class="arrange">
+                        <li>डेटा विज़ुअलाइजेशन उपकरण</li>
+                        <li>विवरणात्मक ग्राफ और रिपोर्ट बनाना</li>
+                        <span class="additional-content" id="additional-content-5">
+                            <li>डेटा विज़ुअलाइजेशन के केस स्टडीज</li>
+                            <li>प्रस्तुतियों और रिपोर्टों के लिए सर्वश्रेष्ठ अभ्यास</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-5">अधिक पढ़ें</button>
+
+                    <h3>मॉड्यूल 6 - वास्तविक-विश्व प्रोजेक्ट्स</h3>
+                    <ul class="arrange">
+                        <li>सामान्य प्रोजेक्ट केस स्टडीज़</li>
+                        <li>प्रोजेक्ट के निष्पादन के सर्वोत्तम अभ्यास</li>
+                        <span class="additional-content" id="additional-content-6">
+                            <li>प्रोजेक्ट का मूल्यांकन और समीक्षा</li>
+                            <li>पेशेवर प्रोजेक्ट प्रदर्शनी के लिए टिप्स</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-6">अधिक पढ़ें</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-features">
+            <h3 class="course-content">कोर्स की विशेषताएँ</h3>
+            <ul>
+                <li><i class="fa-solid fa-check"></i> 24/7 समर्थन</li>
+                <li><i class="fa-solid fa-check"></i> स्व-गति के अध्ययन की सुविधा</li>
+                <li><i class="fa-solid fa-check"></i> अनुभवी प्रशिक्षकों से मार्गदर्शन</li>
+                <li><i class="fa-solid fa-check"></i> लाइव सत्र और वेबिनार</li>
+                <li><i class="fa-solid fa-check"></i> प्रमाणपत्र की पेशकश</li>
+                <li><i class="fa-solid fa-check"></i> समुदाय और नेटवर्किंग अवसर</li>
+            </ul>
+        </section>
+
+        <section class="course-review">
+            <h3>छात्रों की समीक्षाएँ</h3>
+            <div class="review">
+                <p>"डाटा साइंस में मेरी समझ को गहराने के लिए एक बेहतरीन कोर्स। पाठ्यक्रम सुव्यवस्थित और प्रासंगिक था।"</p>
+                <p><b>राहुल शर्मा</b></p>
+            </div>
+            <div class="review">
+                <p>"कोर्स सामग्री बहुत अच्छी तरह से डिजाइन की गई थी, और व्यावहारिक परियोजनाओं ने मेरे कौशल को परिष्कृत करने में मदद की।"</p>
+                <p><b>सोनिया मिश्रा</b></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 EduCampus. सभी अधिकार सुरक्षित।</p>
+    </footer>
+</body>
+
+</html>

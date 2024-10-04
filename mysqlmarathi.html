@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कोर्स तपशील - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>EduCampus</h3></a> 
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="शोधा..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">भाषा</option>
+                            <option value="english">इंग्रजी</option>
+                            <option value="hindi">हिंदी</option>
+                            <option value="punjabi">पंजाबी</option>
+                            <option value="telugu">तेलुगू</option>
+                            <option value="tamil">तमिळ</option>
+                            <option value="kannada">कन्नड</option>
+                            <option value="bengali">बंगाली</option>
+                            <option value="marathi">मराठी</option>
+                            <option value="malayalam">मल्याळम</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                            <option value="all">कोर्सेस</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">जावास्क्रिप्ट</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">Css</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">डेटा सायन्स</option>
+                        </select>
+                    </li>
+                    <li><a href="#about">आमच्याबद्दल</a></li>
+                    <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="navbar-cart">
+                        <a href="login.html">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>MySQL</h1>
+                <p class="program-type">नॅनोडीग्री प्रोग्राम</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(729)</span>
+                </div>
+
+                <p class="description">
+                    या प्रोग्रामचा उद्देश म्हणजे विद्यार्थ्यांना डेटाबेस अॅडमिनिस्ट्रेशन, डेटा विश्लेषण, आणि बॅकएंड डेव्हलपमेंटच्या भूमिकांसाठी तयार करणे, ज्यासाठी उन्नत SQL कौशल्यांची आवश्यकता आहे.
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;1500 </span> <span class="original-price"> &#8377;2500</span> </b></button>
+                    <button class="enroll-btn" data-course-id="mysql" data-course-name="MySql" data-course-price="1500"><b>नावनोंदणी करा</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>चेकआउट</h2>
+                            <p><b>कोर्स आयडी:</b> <span id="modal-course-id"></span></p>
+                            <p><b>कोर्स नाव:</b> <span id="modal-course-name"></span></p>
+                            <p><b>किंमत:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>प्रमाण:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">पे</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="mysql" data-course-title="MySQL Course" data-course-price="1500"><b>कार्टमध्ये जोडा</b></button>
+                </div>
+
+                <p><b>कोर्स समाविष्ट -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> इंटरमीडिएट</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 25 तास</span>
+                    <span class="meta-item"><i class="icon-projects"></i> रिअल-वर्ल्ड प्रोजेक्ट्स</span>
+                    <span class="meta-item"><i class="icon-certificate"></i>कोर्स पूर्णता प्रमाणपत्र</span>
+                    <span class="meta-item"><i class="icon-updated"></i> शेवटचे अद्यतन 30 जून, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>तुम्ही शिकाल अशी कौशल्ये:</h3>
+                    <p>• कोर प्रोग्रामिंग संकल्पना तयार करा
+                        • रिलेशनल डेटाबेस संकल्पना शिका
+                        • SQL वाचा आणि लिहा</p>
+                </div>
+            </div>
+            <div class="courseimage"><img class="courseimage1" src="https://th.bing.com/th/id/OIP.K8YR1Og0rEn-6aFDZ4Dt3QHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="javascript">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">कोर्स सामग्री</h3>
+
+                <div class="popup-content">
+                    <h3>मॉड्यूल 1 - रिलेशनल डेटाबेस संकल्पना</h3>
+                    <ul class="arrange">
+                        <li>रिलेशनल डेटाबेस मूलतत्त्व</li>
+                        <li>SQL मध्ये व्हेरिएबल स्कोप</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>डेटाबेस डिझाइन पॅटर्न</li>
+                            <li>SQL स्कीमा</li>
+                            <li>SQL फंक्शन्स</li>
+                            <li>SQL पद्धती</li>
+                            <li>डेटा सामान्यीकरण</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">आधिक वाचा</button>
+
+                    <h3>मॉड्यूल 2 - अॅडव्हान्स SQL प्रोग्रामिंग</h3>
+                    <ul class="arrange">
+                        <li>जटिल SQL क्वेरी</li>
+                        <li>अॅडव्हान्स क्वेरींग संकल्पना</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>SQL प्रोग्रामिंग पॅराडायम्स</li>
+                            <li>डेटा इंटेग्रिटी</li>
+                            <li>रिपोर्ट जनरेशन</li>
+                            <li>डेटाबेस ऑप्टिमायझेशन</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">आधिक वाचा</button>
+                </div>
+
+                <div class="video-container">
+                    <h3>डेमो व्हिडिओ</h3>
+                    <iframe  src="https://www.youtube.com/embed/UEO555zH84Q?si=lhk-KYNZkQB4j7_g"  allowfullscreen></iframe>
+                </div>
+                
+                
+            </div>
+            </section>
+                
+                <div class="container">
+                    <div class="heading"><b>सर्वोत्तम शिक्षक</b></div>
+                    <div class="profiles">
+                        <div class="profile-card">
+                            <img src="https://img-b.udemycdn.com/course/240x135/3836848_42cf_3.jpg" alt="प्रियंका जैन">
+                            <h3>प्रियंका जैन</h3>
+                            <h4>सॉफ्टवेअर डेव्हलपर, गुगल</h4>
+                            <p>प्रियंका गुगलमध्ये सीनियर सॉफ्टवेअर डेव्हलपर म्हणून काम करतात. त्यांनी साउथर्न कॅलिफोर्निया विद्यापीठातून कंप्यूटर सायन्समध्ये एमएस केले आहे आणि त्यांनी उद्योगात दहा वर्षांपेक्षा जास्त काळ घालवला आहे.</p>
+                        </div>
+                        <div class="profile-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZG8e4kokHZmsf15zrPOj6ENoPRnFXCnzz5w&s" alt="मेलिसा हाँग">
+                            <h3>मेलिसा हाँग</h3>
+                            <h4>संस्थापक, OMG कोड</h4>
+                            <p>मेलिसा एक टॉप रेटेड प्लस अपवर्क फ्रीलांसर, वेलो सर्टिफाइड Wix पार्टनर, उद्योजक आणि OMG कोडच्या तंत्रज्ञान कंपनीच्या संस्थापक आहेत. मेलिसाने UC बर्कलेला उपस्थिती दिली आहे, दक्षिण अमेरिकेत स्पॅनिश शिकताना वैद्यकशास्त्राचे अध्ययन केले आहे आणि तिच्या शिक्षणात खूप अनुभव आणला आहे.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="header">
+                        <span class="rating">⭐ पुनरावलोकने आणि रेटिंग्स</span>
+                    </div>
+                    <div class="reviews">
+                        <div class="review">
+                            <div class="user">
+                                <div class="user-icon">AK</div>
+                                <div class="user-info">
+                                    <span class="user-name">अशोक रेड्डी</span>
+                                    <span class="review-date">एक आठवडा पूर्वी</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p>या कोर्समुळे SQL अध्ययनात मला खूप मदत झाली. शिवाय, जोनास व्याख्याने आणि कार्यप्रणालीच्या मागील भागांवर अनेक व्यावहारिक उदाहरणांसह शिक्षण देतात.</p>
+                            </div>
+                            <div class="helpful">
+                                <span>उपयुक्त?</span>
+                                <span class="thumbs">👍👎</span>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="user">
+                                <div class="user-icon">DK</div>
+                                <div class="user-info">
+                                    <span class="user-name">दिनेश कुमार</span>
+                                    <span class="review-date">3 आठवडे पूर्वी</span>
+                                </div>
+                            </div>
+                            <div class="review-text">
+                                <p>हे एक उत्कृष्ट शिकण्याचा अनुभव होता, या कोर्समध्ये प्रवेश घेण्यापूर्वी मी पूर्णपणे शून्यवरून सुरुवात केली, पण आता मी अधिक आत्मविश्वासाने स्वतःला चैलेंज करण्यासाठी सज्ज आहे, नोकरी मिळवण्यासाठी आणि शिकण्यास सुरू ठेवण्यासाठी :)</p>
+                            </div>
+                            <div class="helpful">
+                                <span>उपयुक्त?</span>
+                                <span class="thumbs">👍👎</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="course-recommendations">
+                    <h2>कोर्स शिफारसी</h2>
+                    <div class="recommendations">
+                        <div class="recommendation">
+                            <img src="images/javascript.jpeg" alt="कोर्स 1">
+                            <a href="course-details.html" class="btn btn-primary"><h4>JavaScript</h4></a>
+                            <p class="card-text">तुमच्या वेब पृष्ठांना जीवन द्या</p>
+                        </div>
+                        <div class="recommendation">
+                            <img src="images/react.jpeg" alt="कोर्स 2">
+                            <a href="React.html" class="btn btn-primary"><h4>React</h4></a>
+                            <p>कोर्स 2 ची संक्षिप्त वर्णन.</p>
+                        </div>
+                        <div class="recommendation">
+                            <img src="images/angularjs.jpeg" alt="कोर्स 3">
+                            <a href="Angular.html" class="btn btn-primary"><h4>Angular</h4></a>
+                            <p>कोर्स 3 ची संक्षिप्त वर्णन.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="FAQ">
+                    <h3>वारंवार विचारले जाणारे प्रश्न</h3>
+                
+                    <details class="faq-item">
+                        <summary>कोर्समध्ये कोणते विषय समाविष्ट आहेत?</summary>
+                        <p>कोर्समध्ये SQL मूलतत्त्वे, डेटाबेस डिझाइन, डेटा व्यवस्थापन, जटिल क्वेरींग, कार्यक्षमता ऑप्टिमायझेशन, ट्रान्झॅक्शन्स, स्टोर्ड प्रोसीजर आणि MySQL, PostgreSQL, आणि Oracle यांसारख्या लोकप्रिय डेटाबेस सिस्टम्सची ओळख यांचा समावेश आहे.</p>
+                    </details>
+                
+                    <details class="faq-item">
+                        <summary>कोर्समध्ये काही व्यावहारिक प्रकल्प किंवा व्यायाम आहेत का?</summary>
+                        <p>होय, कोर्समध्ये शिकलेल्या गोष्टी लागू करण्यासाठी आणि व्यावहारिक कौशल्ये विकसित करण्यासाठी अनेक व्यावहारिक प्रकल्प आणि व्यायामांचा समावेश आहे.</p>
+                    </details>
+                
+                    <details class="faq-item">
+                        <summary>कोर्स मला डेव्हलपर म्हणून नोकरी मिळवण्यासाठी मदत करेल का?</summary>
+                        <p>कोर्स SQL मध्ये निपुण होण्यासाठी आवश्यक कौशल्ये आणि ज्ञान प्रदान करतो, पण नोकरी मिळवण्यासाठी अन्य घटकांवरही अवलंबून असते जसे की तुमची संपूर्ण कौशल्ये, अनुभव, पोर्टफोलिओ आणि नोकरीच्या बाजारपेठेच्या परिस्थिती. कोर्स तुम्हाला मजबूत पाया तयार करण्यात मदत करेल आणि पुढील शिक्षण आणि नोकरीच्या अर्जासाठी तयार करेल.</p>
+                    </details>
+                
+                    <details class="faq-item">
+                        <summary>कोर्स सामग्री कशी मिळवता येईल?</summary>
+                        <p>कोर्स सामग्री ऑनलाइन कोर्स प्लॅटफॉर्मद्वारे प्राप्त केली जाऊ शकते, जो डेस्कटॉप आणि मोबाइल उपकरणांसह सुसंगत आहे.</p>
+                    </details>
+                </div>
+                
+                <footer>
+                    <div class="footer-container">
+                        <div class="footer-section">
+                            <h4>शिकण्याचे संसाधने</h4>
+                            <ul>
+                                <li><a href="#">शिकण्याचे कोर्स</a></li>
+                                <li><a href="#">अभ्यास समस्यांचे</a></li>
+                                <li><a href="#">EduCampus ब्लॉग</a></li>
+                                <li><a href="#">FAQ's</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>प्रोग्रामिंग टूल्स</h4>
+                            <ul>
+                                <li><a href="#">ऑनलाइन IDE</a></li>
+                                <li><a href="#">कोडिंग स्पर्धा</a></li>
+                                <li><a href="#">होस्ट रेटेड स्पर्धा</a></li>
+                                <li><a href="#">समस्या सेटिंग</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>अधिक</h4>
+                            <ul>
+                                <li><a href="#">EduCampus कॉलेजसाठी</a></li>
+                                <li><a href="#">आमच्याशी संपर्क साधा</a></li>
+                                <li><a href="#">कोड ऑफ कंडक्ट</a></li>
+                                <li><a href="#">वापरकर्ता रँकिंग</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>वापर धोरण</h4>
+                            <ul>
+                                <li><a href="#">गोपनीयता धोरण</a></li>
+                                <li><a href="#">अटी</a></li>
+                                <li><a href="#">इतर धोरण</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 www.EduCampus.com. सर्व हक्क राखीव.</p>
+                    </div>
+                </footer>
+                

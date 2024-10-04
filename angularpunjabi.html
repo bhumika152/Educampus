@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ਐਂਗੁਲਰ ਕੋਰਸ ਵੇਰਵੇ - ਏਡਯੂ ਕੈਂਪਸ</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>ਏਡਯੂ ਕੈਂਪਸ</h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="ਖੋਜੋ..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">ਭਾਸ਼ਾਵਾਂ</option>
+                            <option value="english">ਅੰਗ੍ਰੇਜ਼ੀ</option>
+                            <option value="hindi">ਹਿੰਦੀ</option>
+                            <option value="punjabi">ਪੰਜਾਬੀ</option>
+                            <option value="telugu">ਤੇਲਗੂ</option>
+                            <option value="tamil">ਤਾਮਿਲ</option>
+                            <option value="kannada">ਕੰਨੜ</option>
+                            <option value="bengali">ਬੰਗਾਲੀ</option>
+                            <option value="marathi">ਮਰਾਠੀ</option>
+                            <option value="malayalam">ਮਲਯਾਲਮ</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                            <option value="all">ਕੋਰਸ</option>
+                            <option value="Cpp.html" data-language="c++">ਸੀ++</option>
+                            <option value="java.html" data-language="java">ਜਾਵਾ</option>
+                            <option value="Php.html" data-language="php">ਪੀਐਚਪੀ</option>
+                            <option value="PowerBi.html" data-language="powerbi">ਪਾਵਰ ਬੀਆਈ</option>
+                            <option value="mysql.html" data-language="mysql">ਮਾਈ ਐਸਕਿਊਐਲ</option>
+                            <option value="python.html" data-language="python">ਪਾਈਥਨ</option>
+                            <option value="course-details.html" data-language="javascript">ਜਾਵਾਸਕ੍ਰਿਪਟ</option>
+                            <option value="React.html" data-language="react">ਰੀਐਕਟ</option>
+                            <option value="cssCourse.html" data-language="angular">ਸੀਐਸਐਸ</option>
+                            <option value="Ai.html" data-language="ai">ਏਆਈ</option>
+                            <option value="DataScience.html" data-language="datascience">ਡਾਟਾ ਸਾਇੰਸ</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>ਐਂਗੁਲਰ</h1>
+                <p class="program-type">ਨੈਨੋ ਡਿਗਰੀ ਪ੍ਰੋਗਰਾਮ</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(328)</span>
+                </div>
+
+                <p class="description">
+                    ਇਹ ਐਂਗੁਲਰ ਕੋਰਸ ਤੁਹਾਨੂੰ ਐਂਗੁਲਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਡਾਇਨਾਮਿਕ ਵੈੱਬ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਵਿੱਚ ਸਹਾਇਕ ਹੋਵੇਗਾ, ਜੋ ਕਿ ਫਰੰਟ-ਐਂਡ ਡਿਵੈਲਪਮੈਂਟ ਲਈ ਇੱਕ ਮੁੱਖ ਫਰੇਮਵਰਕ ਹੈ।
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;1500 </span> <span class="original-price"> &#8377;2500</span> </b></button>
+                    <button class="enroll-btn" data-course-id="angular" data-course-name="Angular" data-course-price="1500"><b>ਹੁਣੇ ਨਾਮ ਦਰਜ ਕਰੋ</b></button>
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>ਚੈੱਕਆਉਟ</h2>
+                            <p><b>ਕੋਰਸ ਆਈਡੀ:</b> <span id="modal-course-id"></span></p>
+                            <p><b>ਕੋਰਸ ਦਾ ਨਾਮ:</b> <span id="modal-course-name"></span></p>
+                            <p><b>ਕੀਮਤ:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>ਮਾਤਰਾ:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">ਭੁਗਤਾਨ ਕਰੋ</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="angular" data-course-title="ਐਂਗੁਲਰ ਕੋਰਸ" data-course-price="1500"><b>ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ</b></button>
+                </div>
+
+                <p><b>ਕੋਰਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> ਬੇਗਿਨਰ ਤੋਂ ਐਡਵਾਂਸਡ</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 50 ਘੰਟੇ</span>
+                    <span class="meta-item"><i class="icon-projects"></i> ਅਸਲੀ ਸੰਸਾਰ ਦੇ ਪ੍ਰੋਜੈਕਟਸ</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> ਕੋਰਸ ਪੂਰਾ ਕਰਨ ਦੀ ਸਰਟੀਫਿਕੇਟ</span>
+                    <span class="meta-item"><i class="icon-updated"></i> ਆਖਰੀ ਅੱਪਡੇਟ 29 ਜੁਲਾਈ 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>ਤੁਸੀਂ ਜੋ ਹੁਨਰ ਸਿੱਖੋਗੇ:</h3>
+                    <p>• ਐਂਗੁਲਰ ਆਰਕੀਟੈਕਚਰ ਅਤੇ ਕੰਪੋਨੈਂਟਸ
+                        • ਆਰਐਕਸਜੇਐਸ ਨਾਲ ਰਿਐਕਟਿਵ ਪ੍ਰੋਗਰਾਮਿੰਗ
+                        • ਸਿੰਗਲ-ਪੇਜ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਬਣਤਰ
+                        • ਫਾਰਮ ਹੈਂਡਲਿੰਗ ਅਤੇ ਵੈਰੀਫਿਕੇਸ਼ਨ</p>
+                </div>
+            </div>
+            <div class="courseimage">
+                <img class="courseimage1" src="images/angularjs.jpeg" alt="Angular">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">ਕੋਰਸ ਸਮੱਗਰੀ</h3>
+                <div class="popup-content">
+                    <h3>ਮੌਡਿਊਲ 1 - ਐਂਗੁਲਰ ਦਾ ਪਰਚਾਰ</h3>
+                    <ul class="arrange">
+                        <li>ਐਂਗੁਲਰ ਵਾਤਾਵਰਣ ਸੈੱਟਅਪ</li>
+                        <li>ਐਂਗੁਲਰ ਆਰਕੀਟੈਕਚਰ ਦਾ ਜਾਇਜ਼ਾ</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>ਐਂਗੁਲਰ ਕੰਪੋਨੈਂਟਸ ਬਣਾਉਣਾ</li>
+                            <li>ਡਾਟਾ ਬਾਈਂਡਿੰਗ ਅਤੇ ਡਾਇਰੈਕਟਿਵਜ਼</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">ਹੋਰ ਪੜ੍ਹੋ</button>
+
+                    <h3>ਮੌਡਿਊਲ 2 - ਐਂਗੁਲਰ ਸੇਵਾਵਾਂ ਅਤੇ ਰਾਉਟਿੰਗ</h3>
+                    <ul class="arrange">
+                        <li>ਐਂਗੁਲਰ ਵਿੱਚ ਰਾਉਟਿੰਗ ਐਡ ਕਰਨਾ</li>
+                        <li>ਸੇਵਾ ਅਤੇ ਇੰਜੈਕਸ਼ਨ</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>ਹਾਈ ਪਰਫਾਰਮੈਂਸ ਐਂਗੁਲਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣਾ</li>
+                            <li>ਐਂਗੁਲਰ ਵਿੱਚ ਪੀWA (ਪਰੋਗਰੈਸਿਵ ਵੈੱਬ ਐਪਸ)</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">ਹੋਰ ਪੜ੍ਹੋ</button>
+                    
+                    <h3>ਮੌਡਿਊਲ 3 - ਅਡਵਾਂਸਡ ਐਂਗੁਲਰ ਵਿਸ਼ੇ</h3>
+                    <ul class="arrange">
+                        <li>NgRx ਨਾਲ ਸਟੇਟ ਮੈਨੇਜਮੈਂਟ</li>
+                        <li>ਕਸਟਮ ਪਾਈਪਸ ਅਤੇ ਡਾਇਰੈਕਟਿਵਜ਼</li>
+                        <span class="additional-content" id="additional-content-3">
+                            <li>ਐਂਗੁਲਰ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੀ ਯੂਨਿਟ ਟੈਸਟਿੰਗ</li>
+                            <li>ਪੇਰਫਾਰਮੈਂਸ ਓਪਟੀਮਾਈਜ਼ੇਸ਼ਨ</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-3">ਹੋਰ ਪੜ੍ਹੋ</button>
+                    </div>
+                    <div class="prerequisites">
+                        <h3>ਪਹਿਲਾਂ ਦੀਆਂ ਲੋੜਾਂ:</h3>
+                        <p>HTML, CSS, ਅਤੇ JavaScript ਦੀ ਮੂਲ ਜਾਣਕਾਰੀ</p>
+                    </div>
+                    </div>
+                    <div class="video-container">
+                        <h3>ਡੈਮੋ ਵੀਡੀਓ</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ejBkOjEG6F0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    </section>
+                    
+                    <div class="container">
+                        <div class="heading"><b>ਸਭ ਤੋਂ ਵਧੀਆ ਸਿੱਖਿਆਵਣ ਵੱਲੋਂ ਸਿਖਾਇਆ ਗਿਆ</b></div>
+                        <div class="profiles">
+                            <div class="profile-card">
+                                <img src="images/lady3.png" alt="Sara Wilson">
+                                <h3>Sara Wilson</h3>
+                                <h4>ਐਂਗੁਲਰ ਵਿਸ਼ੇਸ਼ਜ્ઞ, DevWorks</h4>
+                                <p>Sara ਇੱਕ ਤਜਰਬੇਕਾਰ ਐਂਗੁਲਰ ਵਿਕਾਸਕਾਰ ਹੈ ਜਿਸਦਾ ਵੱਡਾ ਅਨੁਭਵ ਸਕੇਲ ਕਰਨ ਯੋਗ ਵੈਬ ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਵਿੱਚ ਹੈ।</p>
+                            </div>
+                            <div class="profile-card">
+                                <img src="images/male2.png" alt="John Doe">
+                                <h3>John Doe</h3>
+                                <h4>ਫਰੰਟ-ਐਂਡ ਡਿਵੈਲਪਰ, Tech Corp</h4>
+                                <p>John ਫਰੰਟ-ਐਂਡ ਵਿਕਾਸ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਗਿਆਨ ਹੈ ਅਤੇ ਉਤਸ਼ਾਹ ਨਾਲ ਗਤੀਸ਼ੀਲ ਉਪਭੋਗਤਾ ਅਨੁਭਵ ਬਣਾਉਣ ਲਈ ਪਿਆਸਾ ਹੈ।</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <div class="header">
+                            <span class="rating">⭐ ਸਮੀਖਿਆਵਾਂ ਅਤੇ ਰੇਟਿੰਗਾਂ</span>
+                        </div>
+                        <div class="reviews">
+                            <div class="review">
+                                <div class="user">
+                                    <div class="user-icon">AK</div>
+                                    <div class="user-info">
+                                        <span class="user-name">Ashok Reddy</span>
+                                        <span class="review-date">ਇੱਕ ਹਫ਼ਤਾ ਪਹਿਲਾਂ</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>ਇਹ ਕੋਰਸ ਮੈਨੂੰ ਐਂਗੁਲਰ ਜੇਐਸ ਦੀ ਪੜਾਈ ਵਿੱਚ ਬਹੁਤ ਮਦਦਗਾਰ ਹੈ। ਇਨ੍ਹਾਂ ਤੋਂ ਇਲਾਵਾ, ਜੋਨਸ ਵਿਆਖਿਆ ਕਰਨ ਅਤੇ ਬੈਕ ਸीन ਵਿੱਚ ਵਿਆਖਿਆਵਾਂ ਅਤੇ ਮੈਕੈਨੀਜ਼ਮ ਨੂੰ ਸਹੀ ਅਤੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਨਾਲ ਕੁਝ ਪ੍ਰਯੋਗਿਕ ਉਦਾਹਰਨਾਂ ਨਾਲ ਸਿਖਾਉਂਦੇ ਹਨ।</p>
+                                </div>
+                                <div class="helpful">
+                                    <span>ਮਦਦਗਾਰ?</span>
+                                    <span class="thumbs">👍👎</span>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="user">
+                                    <div class="user-icon">DK</div>
+                                    <div class="user-info">
+                                        <span class="user-name">Dinesh Kumar</span>
+                                        <span class="review-date">3 ਹਫ਼ਤੇ ਪਹਿਲਾਂ</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>ਇਹ ਇਕ ਸ਼ਾਨਦਾਰ ਸਿੱਖਣ ਦਾ ਅਨੁਭਵ ਸੀ, ਇਸ ਕੋਰਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਮੈਂ ਸਿੱਖਣ ਵਿੱਚ ਸਥਿਤੀ ਤੋਂ ਸ਼ੁਰੂ ਕੀਤਾ ਸੀ ਪਰ ਹੁਣ ਮੈਂ ਖੁਦ ਨੂੰ ਹੋਰ ਚੁਣੌਤੀ ਦੇਣ ਲਈ ਯਕੀਨ ਦੇ ਨਾਲ ਆਉਂਦੀ ਹਾਂ, ਇੱਕ ਨੌਕਰੀ ਲੈਣ ਅਤੇ ਸਿੱਖਣਾ ਜਾਰੀ ਰੱਖਣ ਲਈ :)</p>
+                                </div>
+                                <div class="helpful">
+                                    <span>ਮਦਦਗਾਰ?</span>
+                                    <span class="thumbs">👍👎</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <section class="course-recommendations">
+                        <h2>ਕੋਰਸ ਦੀ ਸੁਝਾਵਾਂ</h2>
+                        <div class="recommendations">
+                            <div class="recommendation">
+                                <img src="images/javascript.jpeg" alt="ਕੋਰਸ 1">
+                                <a href="course-details.html" class="btn btn-primary"><h4>ਜਾਵਾਸਕ੍ਰਿਪਟ</h4></a>
+                                <p class="card-text">ਆਪਣੇ ਵੈਬ ਪੇਜ ਨੂੰ ਜੀਵੰਤ ਬਣਾਓ</p>
+                            </div>
+                            <div class="recommendation">
+                                <img src="images/react.jpeg" alt="ਕੋਰਸ 2">
+                                <a href="React.html" class="btn btn-primary"><h4>ਰੀਐਕਟ</h4></a>
+                                <p>ਕੋਰਸ 2 ਦਾ ਛੋਟਾ ਵੇਰਵਾ।</p>
+                            </div>
+                            <div class="recommendation">
+                                <img src="images/php.jpeg" alt="ਕੋਰਸ 2">
+                                <a href="Php.html" class="btn btn-primary"><h4>PHP</h4></a>
+                                <p>ਕੋਰਸ 2 ਦਾ ਛੋਟਾ ਵੇਰਵਾ।</p>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <div class="FAQ">
+                        <h3>ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ</h3>
+                    
+                        <details class="faq-item">
+                            <summary>ਕੋਰਸ ਵਿੱਚ ਕੀ ਵਿਸ਼ੇ ਕਵਰ ਕੀਤੇ ਗਏ ਹਨ?</summary>
+                            <p>ਕੋਰਸ ਵਿੱਚ ਐਂਗੁਲਰ ਸਿੰਟੈਕਸ ਅਤੇ ਸੇਵਾਵਾਂ, ਸਟੇਟ ਮੈਨੇਜਮੈਂਟ ਅਤੇ ਐਂਗੁਲਰ ਜੇਐਸ ਨਾਲ ਬਣਾਈਆਂ ਗਈਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਕਵਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।</p>
+                        </details>
+                    
+                        <details class="faq-item">
+                            <summary>ਕੀ ਕੋਰਸ ਵਿੱਚ ਕੋਈ ਹੱਥਾਂ-ਤੇ ਪ੍ਰੋਜੈਕਟਾਂ ਜਾਂ ਅਭਿਆਸ ਸ਼ਾਮਲ ਹਨ?</summary>
+                            <p>ਹਾਂ, ਕੋਰਸ ਵਿੱਚ ਬਹੁਤ ਸਾਰੇ ਹੱਥਾਂ-ਤੇ ਪ੍ਰੋਜੈਕਟ ਅਤੇ ਅਭਿਆਸ ਸ਼ਾਮਲ ਹਨ ਜੋ ਤੁਹਾਨੂੰ ਜੋ ਕੁਝ ਤੁਸੀਂ ਸਿੱਖੇ ਹੋ ਉਸ ਨੂੰ ਲਾਗੂ ਕਰਨ ਅਤੇ ਪ੍ਰਾਇਕਟਿਕਲ ਸਕਿਲਸ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਨਗੇ।</p>
+                        </details>
+                    
+                        <details class="faq-item">
+                            <summary>ਕੀ ਕੋਰਸ ਮੈਨੂੰ ਵਿਕਾਸਕਾਰ ਵਜੋਂ ਨੌਕਰੀ ਲੱਭਣ ਵਿੱਚ ਮਦਦ ਕਰੇਗਾ?</summary>
+                            <p>ਜਦਕਿ ਕੋਰਸ ਲਾਜ਼ਮੀ ਸਿੱਖਣ ਦੀਆਂ ਸਕਿਲਸ ਅਤੇ ਗਿਆਨ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ, ਨੌਕਰੀ ਲੱਭਣ ਦਾ ਨਿਰਭਰ ਹੋਰ ਤੱਤਾਂ ਜਿਵੇਂ ਤੁਹਾਡਾ ਕੁੱਲ ਸਕਿਲ ਸੈਟ, ਅਨੁਭਵ, ਪੋਰਟਫੋਲੀਓ, ਅਤੇ ਨੌਕਰੀ ਦੇ ਮਾਰਕੀਟ ਦੇ ਹਾਲਾਤਾਂ 'ਤੇ ਵੀ ਹੈ। ਕੋਰਸ ਤੁਹਾਨੂੰ ਮਜ਼ਬੂਤ ਮੂਲਭੂਤ ਬੁਨਿਆਦ ਬਣਾਉਣ ਅਤੇ ਅੱਗੇ ਸਿੱਖਣ ਅਤੇ ਨੌਕਰੀ ਦੀਆਂ ਅਰਜ਼ੀਆਂ ਲਈ ਤਿਆਰ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰੇਗਾ।</p>
+                        </details>
+                    
+                        <details class="faq-item">
+                            <summary>ਕੋਰਸ ਸਮੱਗਰੀ ਨੂੰ ਕਿਵੇਂ ਪਹੁੰਚਿਆ ਜਾ ਸਕਦਾ ਹੈ?</summary>
+                            <p>ਕੋਰਸ ਸਮੱਗਰੀ ਆਨਲਾਈਨ ਕੋਰਸ ਪਲੇਟਫਾਰਮ ਰਾਹੀਂ ਪਹੁੰਚਿਆ ਜਾ ਸਕਦਾ ਹੈ, ਜੋ ਕਿ ਡੈਸਕਟਾਪ ਅਤੇ ਮੋਬਾਈਲ ਡਿਵਾਈਸਾਂ ਨਾਲ ਅਨੁਕੂਲ ਹੈ।</p>
+                        </details>
+                    </div>
+                    </main>
+                    
+                    <footer>
+                        <div class="footer-container">
+                            <div class="footer-section">
+                                <h4>ਸਹਾਇਤਾ</h4>
+                                <ul>
+                                    <li><a href="#">ਸਹਾਇਤਾ ਕੈਂਟਰ</a></li>
+                                    <li><a href="#">ਗਾਹਕ ਸੇਵਾ</a></li>
+                                    <li><a href="#">ਯੂਜ਼ਰ ਮਾਨਤਾ</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-section">
+                                <h4>ਸੰਪਰਕ ਕਰੋ</h4>
+                                <ul>
+                                    <li><a href="#">ਸੰਪਰਕ ਫਾਰਮ</a></li>
+                                    <li><a href="#">ਬਿਜਨੈਸ ਲਾਈਨ</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-section">
+                                <h4>ਸੋਸ਼ਲ ਮੀਡੀਆ</h4>
+                                <ul>
+                                    <li><a href="#">ਫੇਸਬੁੱਕ</a></li>
+                                    <li><a href="#">ਟਵਿਟਰ</a></li>
+                                    <li><a href="#">ਲਿੰਕਡਇਨ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>© 2024 ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ | ਇਸ਼ਾਰਾ ਨੂੰ ਲਾਜ਼ਮੀ ਦੇਖੋ <a href="#">ਇਸ ਕਾਨੂੰਨੀ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਪੜ੍ਹੋ</a></p>
+                        </div>
+                    </footer>
+                    
+                    <script src="scripts.js"></script>
+                    </body>
+                    </html>
+                    

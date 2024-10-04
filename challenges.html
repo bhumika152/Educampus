@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contests and Challenges</title>
+    <link rel="stylesheet" href="challengestyles.css">
+    <script src="loginscript.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <button class="back-button" onclick="goBack()">Back</button>
+        <div class="logo">Edu Campus</div>
+    </nav>
+    <header>
+        <h1>Technology Contests and Challenges</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#coding">Coding Contests</a></li>
+            <li><a href="#hackathons">Hackathons</a></li>
+            <li><a href="#ml">Machine Learning Challenges</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="coding">
+            <h2>Coding Contests</h2>
+            <div class="contest">
+                <h3>Code Jam</h3>
+                <p>A global coding competition hosted by Google.</p>
+                <button onclick="toggleDetails('code-jam-details')">Show Details</button>
+                <div id="code-jam-details" class="details">
+                    <p>Duration: Annual</p>
+                    <p>Challenges: Algorithmic puzzles.</p>
+                    <a href="https://codingcompetitions.withgoogle.com/codejam" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section id="hackathons">
+            <h2>Hackathons</h2>
+            <div class="contest">
+                <h3>HackMIT</h3>
+                <p>A large-scale hackathon hosted by MIT.</p>
+                <button onclick="toggleDetails('hackmit-details')">Show Details</button>
+                <div id="hackmit-details" class="details">
+                    <p>Duration: 24-48 hours</p>
+                    <p>Focus: Software and hardware projects.</p>
+                    <a href="https://hackmit.org" target="_blank">Learn More</a>
+                </div>
+            </div>
+        </section>
+        <section id="ml">
+            <h2>Machine Learning Challenges</h2>
+            <div class="contest">
+                <h3>Kaggle Competitions</h3>
+                <p>Online machine learning competitions with real-world data sets.</p>
+                <button onclick="toggleDetails('kaggle-details')">Show Details</button>
+                <div id="kaggle-details" class="details">
+                    <p>Duration: Varies</p>
+                    <p>Challenges: Data science and machine learning problems.</p>
+                    <a href="https://www.kaggle.com/competitions" target="_blank">Learn More</a>
+                </div>
+            </div>
+            <div></div>
+            <div class="suscribe">
+                <h4><b>Subscribe for more such Contests and Challenges</b></h4>
+            </div>
+        </section>
+    </main>
+  
+    <script>
+        function toggleDetails(id) {
+    var details = document.getElementById(id);
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
+
+    </script>
+</body>
+</html>

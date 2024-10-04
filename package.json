@@ -1,0 +1,23 @@
+{
+  "name": "educampus",
+  "version": "1.0.0",
+  "description": "EduCampus project using Firebase",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step required for plain HTML/CSS/JS.'"
+  },
+  "dependencies": {
+    "firebase": "^10.12.5"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "keywords": [
+    "firebase",
+    "web",
+    "project"
+  ],
+  "author": "Bhumika Raheja",
+  "license": "MIT"
+}

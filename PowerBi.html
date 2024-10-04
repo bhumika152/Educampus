@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Course Details - Edu Campus</title>
+    <script defer src="courseScript.js"></script>
+    <script type="text/javascript" src="cart.js"></script>
+    <link rel="stylesheet" href="coursestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="common.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><h3>EduCampus</h3></a>
+            </div>
+            <div class="navbar-right">
+                <ul>
+                    <li>
+                        <form action="#" method="GET" class="search-form">
+                            <input type="text" name="search" placeholder="Search..." id="search-bar">
+                        </form>
+                    </li>
+                    <li>
+                        <select id="language-filter">
+                            <option value="all">Languages</option>
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi</option>
+                            <option value="punjabi">Punjabi</option>
+                            <option value="telugu">Telugu</option>
+                            <option value="tamil">Tamil</option>
+                            <option value="kannada">Kannada</option>
+                            <option value="bengali">Bengali</option>
+                            <option value="marathi">Marathi</option>
+                            <option value="malayalam">Malayalam</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="course-list">
+                          <option value="all">Courses</option>
+                            <option value="Cpp.html" data-language="c++">C++</option>
+                            <option value="java.html" data-language="java">Java</option>
+                            <option value="Php.html" data-language="php">Php</option>
+                            <option value="PowerBi.html" data-language="powerbi">Power Bi</option>
+                            <option value="mysql.html" data-language="mysql">MySql</option>
+                            <option value="python.html" data-language="python">Python</option>
+                            <option value="course-details.html" data-language="javascript">javascript</option>
+                            <option value="React.html" data-language="react">React</option>
+                            <option value="cssCourse.html" data-language="angular">Css</option>
+                            <option value="Ai.html" data-language="ai">AI</option>
+                            <option value="DataScience.html" data-language="datascience">Data Sci</option>
+                        </select>
+                    </li>
+                <li><a href="#about">About us</a></li>
+                <li class="navbar-cart"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="navbar-cart">
+                    <a href="login.html">
+                        <i class="fa-solid fa-user"></i>
+            
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-highlight">
+            <div class="course-info">
+                <h1>Power BI</h1>
+                <p class="program-type">Nanodegree Program</p>
+
+                <div class="rating">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <span class="rating-count">(254)</span>
+                </div>
+
+                <p class="description">
+                    This Power BI course offers a deep dive into data visualization and business intelligence, empowering you to create impactful reports and dashboards.
+                </p>
+
+                <div class="buttons">
+                    <button class="enroll-bt"><b><span class="discounted-price">&#8377;800</span> <span class="original-price"> &#8377;1500</span> </b></button>
+                    <button class="enroll-btn" data-course-id="powerbi" data-course-name="Power Bi" data-course-price="800"><b>Enroll Now</b></button>
+
+                    <!-- Modal -->
+                    <div id="enrollModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Checkout</h2>
+                            <p><b>Course ID:</b> <span id="modal-course-id"></span></p>
+                            <p><b>Course Name:</b> <span id="modal-course-name"></span></p>
+                            <p><b>Price:</b> &#8377;<span id="modal-course-price"></span></p>
+                            <p><b>Quantity:</b> <input type="number" id="modal-course-quantity" value="1" min="1"></p>
+                            <button id="pay-button">Pay</button>
+                        </div>
+                    </div>
+                    <button id="add-to-cart-btn" data-course-id="powerbi" data-course-title="Power BI Course" data-course-price="800"><b>Add to Cart</b></button>
+                </div>
+
+                <p><b>Course Include -</b></p>
+                <div class="course-meta">
+                    <span class="meta-item"><i class="icon-level"></i> Beginner to Advanced</span>
+                    <span class="meta-item"><i class="icon-duration"></i> 40 Hours</span>
+                    <span class="meta-item"><i class="icon-projects"></i> Real-World Projects</span>
+                    <span class="meta-item"><i class="icon-certificate"></i> Course Completion Certificate</span>
+                    <span class="meta-item"><i class="icon-updated"></i> Last Updated July 29, 2024</span>
+                </div>
+
+                <div class="skills">
+                    <h3>Skills you'll learn:</h3>
+                    <p>• Creating interactive dashboards
+                        • Data modeling and transformation
+                        • Integrating Power BI with various data sources
+                        • Advanced data visualization techniques</p>
+                </div>
+            </div>
+            <div class="courseimage">
+                <img class="courseimage1" src="data:image/png;base64,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" alt="Power BI">
+            </div>
+        </section>
+
+        <section class="course-content-and-video">
+            <div>
+                <h3 class="course-content">Course Content</h3>
+                <div class="popup-content">
+                    <h3>Module 1 - Introduction to Power BI</h3>
+                    <ul class="arrange">
+                        <li>Getting started with Power BI</li>
+                        <li>Understanding the Power BI ecosystem</li>
+                        <span class="additional-content" id="additional-content-1">
+                            <li>Data import and transformation</li>
+                            <li>Creating basic visualizations</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-1">Read More</button>
+
+                    <h3>Module 2 - Advanced Data Modeling</h3>
+                    <ul class="arrange">
+                        <li>Building complex data models</li>
+                        <li>Creating and using DAX functions</li>
+                        <span class="additional-content" id="additional-content-2">
+                            <li>Custom measures and calculations</li>
+                            <li>Data relationships and hierarchies</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-2">Read More</button>
+
+                    <h3>Module 3 - Power BI Dashboards and Reports</h3>
+                    <ul class="arrange">
+                        <li>Designing interactive dashboards</li>
+                        <li>Publishing and sharing reports</li>
+                        <span class="additional-content" id="additional-content-3">
+                            <li>Power BI Service and Power BI Mobile</li>
+                            <li>Performance optimization</li>
+                        </span>
+                    </ul>
+                    <button class="read-more-button" data-content-id="additional-content-3">Read More</button>
+                </div>
+                <div class="prerequisites">
+                    <h3>Prerequisites:</h3>
+                    <p>Basic understanding of data analysis and visualization principles</p>
+                </div>
+            </div>
+            <div class="video-container">
+                <h3>Demo Video</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NNSHu0rkew8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+        </section>
+
+        <div class="container">
+            <div class="heading"><b>Taught By The Best</b></div>
+            <div class="profiles">
+                <div class="profile-card">
+                    <img src="images/lady.png" alt="Anna Smith">
+                    <h3>Anna Smith</h3>
+                    <h4>Data Analyst, DataTech</h4>
+                    <p>Anna is an expert in data analysis and visualization with extensive experience using Power BI to drive business insights.</p>
+                </div>
+                <div class="profile-card">
+                    <img src="images/male2.png" alt="David Johnson">
+                    <h3>David Johnson</h3>
+                    <h4>Business Intelligence Specialist, InsightCorp</h4>
+                    <p>David specializes in business intelligence and has a deep understanding of Power BI’s advanced features and capabilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <span class="rating">⭐ Reviews and Ratings</span>
+            </div>
+            <div class="reviews">
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">AK</div>
+                        <div class="user-info">
+                            <span class="user-name">Ashok Reddy</span>
+                            <span class="review-date">a week ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>The course helps me a lot in studying Power Bi. Moreover, David teaches and explains definitions and mechanisms behind the scenes with a handful of practical examples carefully and thoroughly.</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="user">
+                        <div class="user-icon">DK</div>
+                        <div class="user-info">
+                            <span class="user-name">Dinesh Kumar</span>
+                            <span class="review-date">3 weeks ago</span>
+                        </div>
+                    </div>
+                    <div class="review-text">
+                        <p>It was a great learning experience, before enrolling to this course I started from absolute zero but now I'm confident enough to challenge myself even more, to land a job and continue learning :)</p>
+                    </div>
+                    <div class="helpful">
+                        <span>Helpful?</span>
+                        <span class="thumbs">👍👎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+    <section class="course-recommendations">
+        <h2>Course Recommendations</h2>
+        <div class="recommendations">
+            <div class="recommendation">
+                <img src="images/Datasc.jpeg" alt="Course 1">
+                <a href="DataScience.html" class="btn btn-primary"><h4>Data Science</h4></a>
+                <p class="card-text">Dive into the world of Data Science</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/AI.jpeg" alt="Course 2">
+                <a href="Ai.html" class="btn btn-primary"><h4>Ai</h4></a>
+                <p>Slowly Ai comes in the Real-World</p>
+            </div>
+            <div class="recommendation">
+                <img src="images/mysql.png" alt="Course 2">
+                <a href="MysqlCourse.html" class="btn btn-primary"><h4>MySQL</h4></a>
+                <p> Handling your databases more easily</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <div class="FAQ">
+            <h3>Frequently Asked Questions</h3>
+    
+            <details class="faq-item">
+                <summary> What topics are covered in the course?</summary>
+                <p>The course covers Interactive Dashboards , Dynamic profiles , Basics of Data analysis</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Are there any hands-on projects or exercises included?</summary>
+                <p>Yes, the course includes multiple hands-on projects and exercises to help you apply what you’ve learned and build practical skills.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary> Will the course help me get a job as a developer?</summary>
+                <p>While the course provides the necessary skills and knowledge to become proficient in Analysis using power bi, landing a job also depends on other factors such as your overall skill set, experience, portfolio, and job market conditions. The course will help you build a strong foundation and prepare you for further learning and job applications.</p>
+            </details>
+    
+            <details class="faq-item">
+                <summary>How can I access the course content?</summary>
+                <p>The course content can be accessed online through the course platform, which is compatible with both desktop and mobile devices.</p>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Learning Resources</h4>
+                <ul>
+                    <li><a href="#">Learning courses</a></li>
+                    <li><a href="#">Practice Problems</a></li>
+                    <li><a href="#">EduCampus Blogs</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Programming Tools</h4>
+                <ul>
+                    <li><a href="#">Online IDE</a></li>
+                    <li><a href="#">Coding Contests</a></li>
+                    <li><a href="#">Host Rated Contest</a></li>
+                    <li><a href="#">Problem Setting</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>More</h4>
+                <ul>
+                    <li><a href="#">EduCampus For Colleges</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Code Of Conduct</a></li>
+                    <li><a href="#">User Ranklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Usage Policy</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Other Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 www.EduCampus.com. All rights reserved.</p>
+            <div class="social-icons">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+
+</html>
